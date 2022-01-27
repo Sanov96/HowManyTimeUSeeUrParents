@@ -30,17 +30,15 @@ namespace HowManyTimeUHave.Controllers
            return " From Request " + mAge;
        }
         */
-        
+            [HttpPost]
+       public string PostUsingParametrs(string mAge, string fAge, string aCnt)
+        {
 
-  
-        [HttpPost]
-       public string PostUsingParametrs(string mAge, string fAge, string aCnt )
-       {
-
+         
             int mAgee = Convert.ToInt32(mAge);
             int fAgee = Convert.ToInt32(fAge);
             int aCntt = Convert.ToInt32(aCnt);
-           
+            
 
             int lowerage;
 
@@ -67,24 +65,23 @@ namespace HowManyTimeUHave.Controllers
                 }
             }
 
-            if(mAgee > fAgee)
-            {
-                lowerage = (mAgee) * aCntt;
-                return " Spotkasz się z rodzicami jeszcze" + lowerage + " razy";
-            }
-            else
-            {
-                lowerage = (fAgee) * aCntt;
-                return " Spotkasz się z rodzicami jeszcze" + lowerage + " razy";
+                if(mAgee > fAgee)
+                {
+                    lowerage = (mAgee) * aCntt;
+                    return " Spotkasz się z rodzicami jeszcze" + lowerage + " razy";
+                }
+                else
+                {
+                    lowerage = (fAgee) * aCntt;
+                    return " Spotkasz się z rodzicami jeszcze" + lowerage + " razy";
 
-            }
-            
+                }
 
 
-            
-       }
-  
-       
+          
+        }
+
+
 
 
         public HomeController(ILogger<HomeController> logger)
