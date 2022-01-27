@@ -2,14 +2,18 @@
     ViewData["Title"] = "HowManyTimesUSeeUrParents";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Hi !, chechk how many times u see ur Parents before they will die (more or less )</h1>
+<div class="text-center" >
+    <h1 class="display-4">Hi !, check how many times u see ur Parents before they will die (more or less )</h1>
     
 </div>
-<div class="menu"></div>
+<div class="menu" >
+<section>
+	@using (Html.BeginForm("PostUsingParametrs","Home"))
+	{
+
 <div class="parent countrySelect">
 				<label>Where do your parents live?</label><br>
-				<select id="Example" name="baby_bear" class="styled">
+				<select id="Country" name="baby_bear" class="styled">
 				  	<option value="81">United Kingdom</option>
 					<option value="79">United States of America</option>
 					<option>----------</option>
@@ -210,7 +214,12 @@
 				<label>How many times u see your parents a year?</label><br>
 				<input type="text" id="Averagecnt" name="aCnt"><br><br>
 				<input id="cSub" name="calculate" type="submit" value="Calcute" onclick="dontnoyet()">
-				<div>
+				
 
 
-				</div>
+}	
+</section>				
+				
+
+
+</div>
