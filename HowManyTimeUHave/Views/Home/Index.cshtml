@@ -6,17 +6,25 @@
     <h1 class="display-4">Hi !, check how many times u see ur Parents before they will die (more or less )</h1>
     
 </div>
-<div class="menu" >
+<div class="menu">
 <section>
 	@using (Html.BeginForm("PostUsingParametrs","Home"))
-	{
+	{ 
 
-<div class="parent countrySelect">
+
+				<br />
+				<label>How old is your mother ?</label><br>
+				<input type="text" id="motherAge" name="mAge"><br><br>
+
+				<label>How old is your father ?</label><br>
+				<input type="text" id="fatherAge" name="fAge"><br><br>
+
+				<label>How many times u see your parents a year?</label><br>
+				<input type="text" id="Averagecnt" name="aCnt"><br><br />
 				<label>Where do your parents live?</label><br>
-				<select id="Country" name="baby_bear" class="styled">
+				<select id="Country" name="CountryName" class="styled">
 				  	<option value="81">United Kingdom</option>
 					<option value="79">United States of America</option>
-					<option>----------</option>
 					<option value="60">Afghanistan</option>
 					<option value="74">Albania</option>
 					<option value="72">Algeria</option>
@@ -203,23 +211,17 @@
 					<option value="64">Yemen</option>
 					<option value="57">Zambia</option>
 					<option value="58">Zimbabwe</option>
+				</select><br/><br />
 
-				</select>
-				</div>
+				<input id="cSub" name="calculate" type="submit" value="Calcute">
 				<br />
-				<label>How old is your mother ?</label><br>
-				<input type="text" id="motherAge" name="mAge"><br><br>
-				<label>How old is your father ?</label><br>
-				<input type="text" id="fatherAge" name="fAge"><br><br>
-				<label>How many times u see your parents a year?</label><br>
-				<input type="text" id="Averagecnt" name="aCnt"><br><br>
-				<input id="cSub" name="calculate" type="submit" value="Calcute" onclick="dontnoyet()">
+						
 				
-
-
-}	
-</section>				
 				
-
-
+				
+}
+</section>
 </div>
+				
+
+

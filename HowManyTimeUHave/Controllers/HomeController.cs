@@ -7,12 +7,6 @@ namespace HowManyTimeUHave.Controllers
 {
     public class HomeController : Controller
     {
-        /*
-        public string mAge { set; get; }
-        public string fAge { set; get; }
-        public string aCnt { set; get; }
-        public string country { set; get; }
-        */
 
         private readonly ILogger<HomeController> _logger;
 
@@ -23,12 +17,65 @@ namespace HowManyTimeUHave.Controllers
             return View();
         }
 
+        /*
+       [HttpPost]
+       public string PostUsingRequest()
+       {
+           string mAge = Request["mAge"];
+           string fAge = Request["fAge"];
+           string aCnt = Request["aCnt"];
+
+           return " From Request " + mAge;
+       }
+        */
+
+
 
         [HttpPost]
-        public string PostUsingParametrs(String mAge, string fAge, string aCnt , string Country)
-        {
-            return "Mother Age: " + mAge + "Father Age" + fAge;
-        }
+       public string PostUsingParametrs(string mAge, string fAge, string aCnt, string Country )
+       {
+
+            int mAgee = Convert.ToInt32(mAge);
+            int fAgee = Convert.ToInt32(fAge);
+            int aCntt = Convert.ToInt32(aCnt);
+            int Countryy = Convert.ToInt32(Country);
+
+            int lowerage;
+
+           
+            
+            if (mAgee == 0 && fAgee == 0)
+            {
+
+                if (mAgee == 0)
+                {
+                    return "Spotkasz się z tatą jeszcze: " + mAgee + " razy";
+                }
+                else if (fAgee == 0)
+
+                {
+                    return "Spotkasz się z mamą jeszcze: " + mAgee + " razy";
+                }
+            }
+
+            if(mAgee > fAgee)
+            {
+                lowerage = (Countryy - mAgee) * aCntt;
+                return " Spotkasz się z rodzicami jeszcze" + lowerage + " razy";
+            }
+            else
+            {
+                lowerage = (Countryy - fAgee) * aCntt;
+                return " Spotkasz się z rodzicami jeszcze" + lowerage + " razy";
+
+            }
+            
+
+
+            
+       }
+       
+
 
         public HomeController(ILogger<HomeController> logger)
         {
