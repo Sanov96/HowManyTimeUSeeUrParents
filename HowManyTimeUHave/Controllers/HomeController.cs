@@ -44,10 +44,16 @@ namespace HowManyTimeUHave.Controllers
 
             int lowerage;
 
+            if (aCntt <= 0)
+                return " Przykro mi to mówić ale już ich nie zobaczysz";
+
+            
+
+            if (mAgee < 0 || fAgee < 0)
+                return " Dane źle wprowadzone";
 
 
-
-            if (mAgee == 0 && fAgee == 0)
+            if (mAgee == 0 || fAgee == 0)
             {
 
                 if (mAgee == 0)

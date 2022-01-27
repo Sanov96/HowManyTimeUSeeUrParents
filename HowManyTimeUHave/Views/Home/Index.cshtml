@@ -1,15 +1,17 @@
 ﻿@{
 	ViewData["Title"] = "HowManyTimesUSeeUrParents";
-
+/*
 	List<SelectListItem> CO = new List<SelectListItem>();
 	CO.Add(new SelectListItem() { Text = "Poland", Value = "77" });
 	CO.Add(new SelectListItem() { Text = "Italy", Value = "55" });
 	CO.Add(new SelectListItem() { Text = "Portugal", Value = "44" });
 	CO.Add(new SelectListItem() { Text = "England", Value = "55" });
+	*/
+
 }
 
 <div class="text-center" >
-    <h1 class="display-4">Hi !, check how many times u see ur Parents before they will die (more or less )</h1>
+    <h1 class="display-4">Hi !, check how many times u will see ur Parents before they will die (more or less )</h1>
     
 </div>
 <div class="menu">
@@ -23,13 +25,13 @@
 
 				<br />
 				<label>How old is your mother ?</label><br>
-				<input type="number" id="motherAge" name="mAge"><br><br>
+				<input type="number" id="motherAge" name="mAge" maxlength="3"><br><br>
 
 				<label>How old is your father ?</label><br>
-				<input type="number" id="fatherAge" name="fAge"><br><br>
+				<input type="number" id="fatherAge" name="fAge" ><br><br>
 
 				<label>How many times u see your parents a year?</label><br>
-				<input type="number" id="Averagecnt" name="aCnt"><br><br />
+				<input type="number" id="Averagecnt" name="aCnt" ><br><br />
 				<label>Where do your parents live?</label><br>				
 				<select id="Country" name="CountryName" class="styled">
 				  	<option value="81">United Kingdom</option>
