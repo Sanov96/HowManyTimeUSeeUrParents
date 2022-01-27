@@ -1,5 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "HowManyTimesUSeeUrParents";
+	ViewData["Title"] = "HowManyTimesUSeeUrParents";
+
+	List<SelectListItem> CO = new List<SelectListItem>();
+	CO.Add(new SelectListItem() { Text = "Poland", Value = "77" });
+	CO.Add(new SelectListItem() { Text = "Italy", Value = "55" });
+	CO.Add(new SelectListItem() { Text = "Portugal", Value = "44" });
+	CO.Add(new SelectListItem() { Text = "England", Value = "55" });
 }
 
 <div class="text-center" >
@@ -7,21 +13,24 @@
     
 </div>
 <div class="menu">
-<section>
+
+
+<section id="mainPage">
 	@using (Html.BeginForm("PostUsingParametrs","Home"))
 	{ 
+		
 
 
 				<br />
 				<label>How old is your mother ?</label><br>
-				<input type="text" id="motherAge" name="mAge"><br><br>
+				<input type="number" id="motherAge" name="mAge"><br><br>
 
 				<label>How old is your father ?</label><br>
-				<input type="text" id="fatherAge" name="fAge"><br><br>
+				<input type="number" id="fatherAge" name="fAge"><br><br>
 
 				<label>How many times u see your parents a year?</label><br>
-				<input type="text" id="Averagecnt" name="aCnt"><br><br />
-				<label>Where do your parents live?</label><br>
+				<input type="number" id="Averagecnt" name="aCnt"><br><br />
+				<label>Where do your parents live?</label><br>				
 				<select id="Country" name="CountryName" class="styled">
 				  	<option value="81">United Kingdom</option>
 					<option value="79">United States of America</option>
@@ -211,17 +220,13 @@
 					<option value="64">Yemen</option>
 					<option value="57">Zambia</option>
 					<option value="58">Zimbabwe</option>
-				</select><br/><br />
+				</select>	
+				
+				/*@Html.DropDownList("CountryNameTag", CO, "select")<br/><br /> */
+				
 
 				<input id="cSub" name="calculate" type="submit" value="Calcute">
 				<br />
-						
-				
-				
-				
-}
-</section>
-</div>
-				
-
-
+				}
+				</section>
+				</div>

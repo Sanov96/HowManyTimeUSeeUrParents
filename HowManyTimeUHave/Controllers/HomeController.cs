@@ -2,6 +2,7 @@
 using HowManyTimeUHave.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Collections.Generic;
 
 namespace HowManyTimeUHave.Controllers
 {
@@ -14,6 +15,7 @@ namespace HowManyTimeUHave.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+
             return View();
         }
 
@@ -28,22 +30,23 @@ namespace HowManyTimeUHave.Controllers
            return " From Request " + mAge;
        }
         */
+        
 
-
-
+  
         [HttpPost]
-       public string PostUsingParametrs(string mAge, string fAge, string aCnt, string Country )
+       public string PostUsingParametrs(string mAge, string fAge, string aCnt )
        {
 
             int mAgee = Convert.ToInt32(mAge);
             int fAgee = Convert.ToInt32(fAge);
             int aCntt = Convert.ToInt32(aCnt);
-            int Countryy = Convert.ToInt32(Country);
+           
 
             int lowerage;
 
-           
-            
+
+
+
             if (mAgee == 0 && fAgee == 0)
             {
 
@@ -60,12 +63,12 @@ namespace HowManyTimeUHave.Controllers
 
             if(mAgee > fAgee)
             {
-                lowerage = (Countryy - mAgee) * aCntt;
+                lowerage = (mAgee) * aCntt;
                 return " Spotkasz się z rodzicami jeszcze" + lowerage + " razy";
             }
             else
             {
-                lowerage = (Countryy - fAgee) * aCntt;
+                lowerage = (fAgee) * aCntt;
                 return " Spotkasz się z rodzicami jeszcze" + lowerage + " razy";
 
             }
@@ -74,6 +77,7 @@ namespace HowManyTimeUHave.Controllers
 
             
        }
+  
        
 
 
